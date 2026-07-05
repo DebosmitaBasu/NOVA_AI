@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Sidebar */
+  --sidebar-bg: #171717;
+  --sidebar-hover: #2a2a2a;
+  --sidebar-active: #2a2a2a;
+  --sidebar-border: rgba(255,255,255,0.08);
+  --sidebar-width: 260px;
+
+  /* Main area */
+  --main-bg: #212121;
+  --input-bg: #2f2f2f;
+  --input-border: rgba(255,255,255,0.15);
+  --input-focus: rgba(255,255,255,0.25);
+
+  /* Message bubbles */
+  --user-bubble-bg: #2f2f2f;
+  --assistant-bubble-bg: transparent;
+
+  /* Text */
+  --text-primary: #ececec;
+  --text-secondary: #b4b4b4;
+  --text-muted: #6b6b6b;
+  --text-placeholder: #6b6b6b;
+
+  /* Accent */
+  --accent: #10a37f;
+  --accent-hover: #0d8a6c;
+  --accent-soft: rgba(16, 163, 127, 0.15);
+  --accent-glow: rgba(16, 163, 127, 0.3);
+
+  /* Status */
+  --success: #10a37f;
+  --success-soft: rgba(16, 163, 127, 0.12);
+  --error: #ef4444;
+  --error-soft: rgba(239, 68, 68, 0.12);
+  --warning: #f59e0b;
+
+  /* Borders */
+  --border-subtle: rgba(255,255,255,0.08);
+  --border-medium: rgba(255,255,255,0.12);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text-primary);
+  background: var(--main-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--main-bg);
+  overflow: hidden;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+#root {
+  height: 100vh;
+  position: relative;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+/* ─── Animations ─── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-dot {
+  0%, 80%, 100% { opacity: 0.3; transform: scale(0.7); }
+  40%           { opacity: 1;   transform: scale(1); }
+}
+
+@keyframes recordPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.5); }
+  50%       { box-shadow: 0 0 0 10px rgba(239,68,68,0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}

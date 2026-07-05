@@ -1,0 +1,22 @@
+{
+  "name": "ai-app-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "workspaces": [
+    "ai_backend",
+    "Debosmita-project"
+  ],
+  "scripts": {
+    "dev": "bash scripts/dev.sh",
+    "dev:backend": "npm --prefix ai_backend run dev",
+    "dev:frontend": "npm --prefix Debosmita-project run dev",
+    "build": "npm --prefix ai_backend run build && npm --prefix Debosmita-project run build",
+    "build:backend": "npm --prefix ai_backend run build",
+    "build:frontend": "npm --prefix Debosmita-project run build",
+    "start": "npm --prefix ai_backend run start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
